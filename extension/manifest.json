@@ -1,0 +1,24 @@
+{
+    "name":"LUMI AI chatbot",
+    "version":"0.1.0",
+    "description": "AI chatbot for LU homepage",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://*.lu.lv/*"],
+    "content_scripts": [
+        {
+        "matches": ["https://*.lu.lv/*"],
+        "js": ["contentScript.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+        "resources": [],
+        "matches": ["https://*.lu.lv/*"]
+        }
+    ],
+    "action": {
+        "default_title": "LUMI AI chatbot",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}
