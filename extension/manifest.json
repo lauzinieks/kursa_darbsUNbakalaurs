@@ -1,24 +1,28 @@
 {
-    "name":"LUMI AI chatbot",
-    "version":"0.1.0",
-    "description": "AI chatbot for LU homepage",
-    "permissions": ["storage", "tabs"],
-    "host_permissions": ["https://*.lu.lv/*"],
+    "manifest_version": 3,
+    "name": "LU Footer Input Adder",
+    "version": "1.0",
+    "description": "Adds a text input box to the LU footer menu.",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
     "content_scripts": [
         {
-        "matches": ["https://*.lu.lv/*"],
-        "js": ["contentScript.js"]
+          "matches": ["https://www.lu.lv/*"],
+          "js": ["contentScript.js"],
+          "run_at": "document_end"
         }
     ],
-    "web_accessible_resources": [
-        {
-        "resources": [],
-        "matches": ["https://*.lu.lv/*"]
-        }
-    ],
-    "action": {
-        "default_title": "LUMI AI chatbot",
-        "default_popup": "popup.html"
-    },
-    "manifest_version": 3
-}
+    "icons": {
+      "48": "images/icon48.png"
+    }
+  }
