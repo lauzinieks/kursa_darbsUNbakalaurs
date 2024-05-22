@@ -1,10 +1,11 @@
 functions-framework==3.*
+bs4==0.0.2
 selenium==4.17.2
 unstructured==0.12.6
 langchain==0.1.12
-tiktoken==0.5.2
+langchain-community==0.0.28
 langchain-openai==0.0.8
+google-api-core==2.11.1
+google-cloud-discoveryengine==0.11.11
 google-cloud-storage==2.14.0
-google-cloud-aiplatform==1.47.0
 langchain-google-vertexai==1.0.1
-langchain-google-alloydb-pg==0.2.0
