@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup as Soup
 
 PROJECT_ID = "lumibakalaurs"
 REGION = "europe-west3"
-BUCKET = "lumivectorembeddingstorage"
+BUCKET = "lumi_text_document_bucket"
 BUCKET_URI = f"gs://{BUCKET}"
 STORAGE = storage.Client()
 DATASTORE = "lumi_1715330343731"
