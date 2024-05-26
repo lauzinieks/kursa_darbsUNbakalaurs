@@ -89,6 +89,7 @@ def createEmbeddingStore(_):
     
     urls = [x for x in urls if ".css" not in x] # izdzēš no URL saraksta css lapas
     urls = [x for x in urls if "+371" not in x] # izdzēš no URL saraksta lapas, kuras satur telefona numurus
+    urls = [x for x in urls if "-en" not in x] # izdzēš no URL saraksta lapas, kuras satur angļu valodas programmas
 
     loader = SeleniumURLLoader(urls=urls) # iegūst tekstu no lapām
     documents = loader.load()
