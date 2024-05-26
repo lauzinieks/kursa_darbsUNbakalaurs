@@ -85,7 +85,7 @@ def createEmbeddingStore(_):
     for i in url_loader.lazy_load(): # lazy_load nodrošina, ka ciklā, no saraksta, pārādīsies lapu URL, kas samazina apstrādes laiku
         urls += [i.metadata["source"]] # pievieno sarakstam URL no kurām jāiegūst tekstu
         
-    urls = list(dict.fromkeys(urls)) # izdzēš no URL saraksta duplikātus
+    urls = list(dict.fromkeys(urls)) # izdzēš no URL saraksta dublikātus
     
     urls = [x for x in urls if ".css" not in x] # izdzēš no URL saraksta css lapas
     urls = [x for x in urls if "+371" not in x] # izdzēš no URL saraksta lapas, kuras satur telefona numurus
